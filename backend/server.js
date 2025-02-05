@@ -6,13 +6,21 @@ import { connectdb } from "./lib/db.js";
 import authRoutes from "./routes/auth.route.js";
 import faqRoutes from "./routes/faq.route.js";
 import path from "path"
-
+import cors from "cors";
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 const __dirname= path.resolve()
+
+
+
+app.use(cors({
+  origin: "http://localhost:5173/", // Allow frontend domain
+  methods: "GET, POST, PUT, DELETE",
+  credentials: true, // Allow cookies if needed
+}));
 
 app.use(express.json({ limit: "10mb" }));
 app.use(cookieParser());
