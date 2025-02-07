@@ -7,7 +7,7 @@ import SignUpPage from "./pages/SingUpPage";
 import LoginPage from "./pages/LoginPage";
 import LoadingSpinner from "./component/LodingSpinner";
 import Welcome from "./pages/WelcomePage";
-import FAQPage from "./pages/FaqPage";
+import FAQPage from "./pages/FAQPage";
 import FAQForm from "./component/FAQFrom";
 import FAQUpdate from "./component/FAQUpdate";
 
